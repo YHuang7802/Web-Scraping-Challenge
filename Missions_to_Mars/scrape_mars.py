@@ -60,8 +60,11 @@ def scrape():
 
     comp_table.columns = header
 
+    comp_table_index = comp_table.set_index("Mars - Earth Comparison")
+
+
     # print table
-    html_table = comp_table.to_html()
+    html_table = comp_table_index.to_html()
 
 
 
